@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Recorichardretardo/config-properties.git
+  zipkin:
+    base-url: http://127.0.0.1:9411/
+
+
+server:
+  port: ${port:8888}

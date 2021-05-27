@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: property-access-service
+  profiles:
+    active: dev
+  zipkin:
+    base-url: http://127.0.0.1:9411/
+
+server:
+  port: ${port:8100}
+  
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh

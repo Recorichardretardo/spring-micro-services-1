@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: spring-cloud-api-gateway-service
+  zipkin:
+    base-url: http://127.0.0.1:9411/
+ 
+# calling apis through config class
+
+
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: stock-enquiry
+#          uri: http://PRODUCT-ENQUIRY-SERVICE:8700/
+#          predicates:
+#            - Path=/product-enquiry/**
+            
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: stock-enquiry
+#          uri: http://localhost:8700/
+#          predicates:
+#            - Path=/product-enquiry/**
+
+server:
+  port: ${port:8900}
+      
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

@@ -1,0 +1,7 @@
+https://github.com/Recorichardretardo/config-properties.git
+
+-Dserver.port=8801
+
+
+zuul
+https://howtodoinjava.com/spring-cloud/spring-cloud-api-gateway-zuul/
