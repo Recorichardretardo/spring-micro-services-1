@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "1a48e542-0332-4e5e-993d-8f3dda6ad364",
+		"name": "spring-micro-services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "product-stock-service",
+			"item": [
+				{
+					"name": "/check-product-stock",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8701/check-product-stock/productName/bat/productAvailability/yes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8701",
+							"path": [
+								"check-product-stock",
+								"productName",
+								"bat",
+								"productAvailability",
+								"yes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product-enquiry-service",
+			"item": [
+				{
+					"name": "product-enquiry",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8700/product-enquiry/name/bat/availability/yes/unit/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8700",
+							"path": [
+								"product-enquiry",
+								"name",
+								"bat",
+								"availability",
+								"yes",
+								"unit",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "zuul-api-gateway-server",
+			"item": [
+				{
+					"name": "zuul product enquiry",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/product-enquiry/name/bat/availability/yes/unit/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"product-enquiry",
+								"name",
+								"bat",
+								"availability",
+								"yes",
+								"unit",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "spring-cloud-api-gateway-service",
+			"item": [
+				{
+					"name": "gateway product enquiry",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8900/product-enquiry/name/bat/availability/yes/unit/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8900",
+							"path": [
+								"product-enquiry",
+								"name",
+								"bat",
+								"availability",
+								"yes",
+								"unit",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "access",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8100/access/accessPropertyFile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"access",
+						"accessPropertyFile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actuator",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8100/actuator/refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"actuator",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
